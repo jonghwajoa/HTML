@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      div {
+        border: 1px solid yellow;
+        height: 300px;
+      }
+
+      .wrap {
+        width: 1000px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        /* flex-flow: column wrap; */
+        /* wrap wrap인경우 최소한의 너비가 안맞을경우 아래로 내려감 */
+        /* direction : row , colum 등등 */
+        /* flex-flow   direction + wrap  */
+        /* align-items: center; */
+        /* flex 컨테이너의 높이지정 */
+        justify-content: stretch;
+        /* 로우 위치지정 */
+      }
+
+      .content1 {
+        /* flex-grow: 2; */
+        /* flex-shrink: 1; */
+        flex-basis: 100px;
+        /* flex: 2 1 200px; */
+        /* grow shrink basis 순서 */
+      }
+
+      .content2 {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 100px;
+      }
+      .content3 {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 100px;
+      }
+      .content4 {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 100px;
+      }
+      /*
+        flex-grow : 남은공간을 어떻게 할당할것인지 비율로 지정 / 큰값을 가질수록 많이 늘어남
+        flex-shrink : 공간이 부족할때 줄이는 방법을 정의   큰값을 가질수록 더 많이 줄어듬
+        flex-basis : 항목의 크기를 경정 default : auto
+      */
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="content1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+      </div>
+      <div class="content2">repellat voluptate obcaecati natus expedita nemo culpa ab,</div>
+      <div class="content3">atque alias voluptatum earum similique sint maxime veritatis.</div>
+      <div class="content4">atque alias voluptatum earum similique sint maxime veritatis.</div>
+      <!-- <div class="content5">atque alias voluptatum earum similique sint maxime veritatis.</div>
+      <div class="content6">atque alias voluptatum earum similique sint maxime veritatis.</div>
+      <div class="content7">atque alias voluptatum earum similique sint maxime veritatis.</div>
+      <div class="content8">atque alias voluptatum earum similique sint maxime veritatis.</div> -->
+    </div>
+  </body>
+</html>
