@@ -136,3 +136,8 @@ img {
 .mt50 {
   margin-top: 50px !important;
 }
+
+img,
+fieldset {
+  border: 0 none;
+}
