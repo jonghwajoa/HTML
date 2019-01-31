@@ -31,8 +31,7 @@
 #contents {
 }
 #footer {
-  height: 200px;
-  background: #111;
+  border-top: 1px solid #eee;
 }
 
 /* 컨텐츠 레이아웃 */
@@ -199,11 +198,15 @@
   position: absolute;
   top: 0;
   right: 0;
-  background: url(../img/icon.png) no-repeat 0 -600px;
+  background: url(../img/icon.png) no-repeat 0 -660px;
   width: 60px;
   height: 60px;
   right: 0;
   top: 5px;
+}
+
+.tit .btn.on {
+  background-position: 0 -600px;
 }
 
 /* 배너 */
@@ -836,4 +839,65 @@
 
 .login_footer li a {
   font-size: 12px;
+}
+
+/* 팝업 */
+
+.popup {
+}
+.popup h4 {
+  font-size: 14px;
+  color: #0093bd;
+  padding-bottom: 4px;
+  font-weight: 700;
+}
+.popup ul {
+  overflow: hidden;
+}
+.popup li {
+  float: left;
+  width: 93px;
+  margin-right: 5px;
+}
+
+.popup li:last-child {
+  margin-right: 0px;
+}
+
+.popup li a {
+}
+.popup li a img {
+  width: 100%;
+}
+
+/* 푸터 */
+
+.footer {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.footer ul {
+  margin-bottom: 20px;
+}
+
+.footer li {
+  display: inline;
+  padding: 0 7px 0 10px;
+  position: relative;
+}
+
+.footer li:first-child::before {
+  width: 0;
+  height: 0;
+}
+
+.footer li::before {
+  content: '';
+  width: 1px;
+  height: 12px;
+  background: #ccc;
+  position: absolute;
+  left: 0;
+  top: 2px;
 }
