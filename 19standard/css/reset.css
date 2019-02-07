@@ -85,6 +85,10 @@ img {
   border: 0 none;
 }
 
+button {
+  border: 0;
+}
+
 /* IR 효과 */
 .ir_pm {
   display: block;

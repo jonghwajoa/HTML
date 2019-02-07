@@ -215,7 +215,7 @@
   position: relative;
   padding: 24px 0 20px;
 }
-
+/* 
 .banner a.prev {
   position: absolute;
   top: 60px;
@@ -252,10 +252,10 @@
 
 .banner ul li:nth-child(2) {
   text-align: center;
-} /* ie9부터 적용 */
+} 
 .banner ul li:last-child {
   text-align: right;
-} /* ie9부터 적용 */
+} 
 .banner ul li.ban_img1 {
   text-align: left;
 }
@@ -266,6 +266,70 @@
 
 .banner ul li img:hover {
   border-color: #98bcdc;
+}
+*/
+
+/* 슬릭 배너 */
+.banner .slick-prev {
+  position: absolute;
+  top: 60px;
+  left: -60px;
+  width: 43px;
+  height: 43px;
+  background: url(../img/icon.png) no-repeat -150px 0;
+  text-indent: -99999px;
+}
+
+.banner .slick-next {
+  position: absolute;
+  top: 60px;
+  right: -60px;
+  width: 43px;
+  height: 43px;
+  background: url(../img/icon.png) no-repeat -150px -43px;
+  text-indent: -99999px;
+}
+
+.banner .slick-prev:hover {
+  background-position: -193px 0;
+}
+.banner .slick-next:hover {
+  background-position: -193px -43px;
+}
+
+.banner img {
+  border: 4px solid #dcdcdc;
+}
+
+.banner img:hover {
+  border-color: #98bcdc;
+}
+
+.banner .slick-dots {
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.banner .slick-dots li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+.banner .slick-dots li button {
+  font-size: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #5dbfeb;
+  cursor: pointer;
+}
+
+.banner .slick-dots li.slick-active button {
+  background: #2b9182;
 }
 
 /* content-content */
@@ -721,7 +785,6 @@
 }
 
 .gallery .gallery_btn ul {
-  overflow: hidden;
 }
 
 .gallery .gallery_btn ul li {
@@ -776,6 +839,43 @@
 }
 
 .gallery_img {
+}
+
+/* 슬릭 갤러리 */
+.gallery .gallery_img .slick-slide {
+  margin: 0px;
+}
+.gallery .gallery_btn button {
+  float: left;
+  margin: 1px 2px;
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../img/icon.png) no-repeat;
+}
+.gallery .gallery_btn .gb_icon1 {
+  background-position: -150px -120px;
+}
+.gallery .gallery_btn .gb_icon2 {
+  background-position: -150px -143px;
+}
+.gallery .gallery_btn .gb_icon3 {
+  background-position: -150px -166px;
+}
+.gallery .gallery_btn .gb_icon4 {
+  background-position: -150px -189px;
+}
+.gallery .gallery_btn .gb_icon1:hover {
+  background-position: -173px -120px;
+}
+.gallery .gallery_btn .gb_icon2:hover {
+  background-position: -173px -143px;
+}
+.gallery .gallery_btn .gb_icon3:hover {
+  background-position: -173px -166px;
+}
+.gallery .gallery_btn .gb_icon4:hover {
+  background-position: -173px -189px;
 }
 
 /* 로그인 */
