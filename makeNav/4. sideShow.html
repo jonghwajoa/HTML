@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background: white;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        height: 50px;
+        line-height: 50px;
+        z-index: 999;
+      }
+
+      nav .nav-contatiner {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      nav h1 {
+        float: left;
+      }
+
+      nav ul {
+        overflow: hidden;
+        float: right;
+      }
+
+      nav li {
+        display: inline;
+        margin-left: 2rem;
+      }
+
+      nav li a {
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+      }
+
+      div.content > section:first-child {
+        margin-top: 50px;
+      }
+
+      section {
+        height: 100vh;
+        background: radial-gradient(ellipse farthest-corner at center top, #cbf49a, #1ea623);
+      }
+
+      .up-btn {
+        position: fixed;
+        bottom: 50px;
+        width: 50px;
+        height: 50px;
+        right: 30px;
+        background: rgba(222, 222, 222, 0.2);
+        color: #2f2f2f;
+        z-index: 99999;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        display: none;
+        border-radius: 50%;
+      }
+
+      .mMenu {
+        position: absolute;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        text-align: center;
+        display: none;
+      }
+
+      .content {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .content .side {
+        width: 300px;
+        border: 1px solid blue;
+        flex: 0 0 300px;
+      }
+
+      .content .content-content {
+        flex: 1 1 100%;
+        position: relative;
+      }
+
+      .content .sideBtn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+        text-align: center;
+      }
+      .content .sideBtn span {
+        position: fixed;
+        color: white;
+        font-size: 1rem;
+        line-height: 50px;
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        background: rgba(222, 111, 55, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .mMenu .icon-container {
+      }
+
+      .icon-container .icon,
+      .icon-container .icon::after,
+      .icon-container .icon::before {
+        width: 45px;
+        height: 4px;
+        background: black;
+      }
+
+      .icon {
+        position: relative;
+        margin-top: 20px;
+      }
+
+      .icon::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+      }
+
+      .icon::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+
+      @media (max-width: 800px) {
+        nav .nav-contatiner {
+          position: relative;
+        }
+
+        nav ul {
+          display: block;
+          float: none;
+          width: 300px;
+          height: 100vh;
+          background: white;
+          position: absolute;
+          right: -40px;
+          top: 50px;
+          text-align: center;
+        }
+
+        nav ul li {
+          display: block;
+          padding: 10px;
+        }
+
+        nav ul li a {
+          font-size: 3rem;
+          color: #cccccc;
+        }
+
+        nav ul li a:hover {
+          color: black;
+        }
+        .mMenu {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-contatiner">
+        <h1>JONGHWA</h1>
+
+        <div class="mMenu">
+          <div class="icon-container">
+            <div class="icon"></div>
+          </div>
+        </div>
+
+        <ul class="pcMenu">
+          <li><a href="#">1번</a></li>
+          <li><a href="#">2번</a></li>
+          <li><a href="#">3번</a></li>
+          <li><a href="#">4번</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="side"></div>
+
+      <div class="content-content">
+        <div class="sideBtn"><span id="sideBtnSpan">Toggle</span></div>
+
+        <section>
+          <div class="content-container">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cum suscipit vel
+            corporis impedit deleniti quia id maiores, doloribus sunt consectetur asperiores modi
+            quasi ad voluptatum vitae nulla. Illum, quis! Ut pariatur perspiciatis at recusandae,
+            dolorem quisquam deserunt ipsam fugit minima quo neque nihil voluptatibus rerum placeat
+            tenetur ducimus vel aspernatur officiis explicabo, culpa doloremque beatae alias,
+            voluptatum tempora. Nobis! Velit, eos laboriosam nihil ducimus reprehenderit fuga
+            pariatur maiores maxime consectetur enim. Impedit corrupti facilis aliquam dignissimos.
+            Facilis nam iste porro enim. Quam commodi dignissimos fugit sequi reiciendis eligendi
+            deserunt! Quaerat adipisci voluptate odit vitae delectus enim neque magnam tenetur quae
+            accusamus magni sunt voluptas asperiores rerum quia excepturi non ad, obcaecati odio
+            ipsam deserunt sapiente nam maxime quo! Iure. Iste modi numquam sapiente eius voluptate,
+            porro asperiores ut at impedit corrupti accusantium tenetur ex, reprehenderit eaque,
+            nobis facilis libero quidem amet possimus est quibusdam architecto omnis doloribus
+            rerum. Dolorum.
+          </div>
+        </section>
+        <section>
+          <div class="content-container">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cum suscipit vel
+            corporis impedit deleniti quia id maiores, doloribus sunt consectetur asperiores modi
+            quasi ad voluptatum vitae nulla. Illum, quis! Ut pariatur perspiciatis at recusandae,
+            dolorem quisquam deserunt ipsam fugit minima quo neque nihil voluptatibus rerum placeat
+            tenetur ducimus vel aspernatur officiis explicabo, culpa doloremque beatae alias,
+            voluptatum tempora. Nobis! Velit, eos laboriosam nihil ducimus reprehenderit fuga
+            pariatur maiores maxime consectetur enim. Impedit corrupti facilis aliquam dignissimos.
+            Facilis nam iste porro enim. Quam commodi dignissimos fugit sequi reiciendis eligendi
+            deserunt! Quaerat adipisci voluptate odit vitae delectus enim neque magnam tenetur quae
+            accusamus magni sunt voluptas asperiores rerum quia excepturi non ad, obcaecati odio
+            ipsam deserunt sapiente nam maxime quo! Iure. Iste modi numquam sapiente eius voluptate,
+            porro asperiores ut at impedit corrupti accusantium tenetur ex, reprehenderit eaque,
+            nobis facilis libero quidem amet possimus est quibusdam architecto omnis doloribus
+            rerum. Dolorum.
+          </div>
+        </section>
+        <section>
+          <div class="content-container">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cum suscipit vel
+            corporis impedit deleniti quia id maiores, doloribus sunt consectetur asperiores modi
+            quasi ad voluptatum vitae nulla. Illum, quis! Ut pariatur perspiciatis at recusandae,
+            dolorem quisquam deserunt ipsam fugit minima quo neque nihil voluptatibus rerum placeat
+            tenetur ducimus vel aspernatur officiis explicabo, culpa doloremque beatae alias,
+            voluptatum tempora. Nobis! Velit, eos laboriosam nihil ducimus reprehenderit fuga
+            pariatur maiores maxime consectetur enim. Impedit corrupti facilis aliquam dignissimos.
+            Facilis nam iste porro enim. Quam commodi dignissimos fugit sequi reiciendis eligendi
+            deserunt! Quaerat adipisci voluptate odit vitae delectus enim neque magnam tenetur quae
+            accusamus magni sunt voluptas asperiores rerum quia excepturi non ad, obcaecati odio
+            ipsam deserunt sapiente nam maxime quo! Iure. Iste modi numquam sapiente eius voluptate,
+            porro asperiores ut at impedit corrupti accusantium tenetur ex, reprehenderit eaque,
+            nobis facilis libero quidem amet possimus est quibusdam architecto omnis doloribus
+            rerum. Dolorum.
+          </div>
+        </section>
+        <section>
+          <div class="content-container">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cum suscipit vel
+            corporis impedit deleniti quia id maiores, doloribus sunt consectetur asperiores modi
+            quasi ad voluptatum vitae nulla. Illum, quis! Ut pariatur perspiciatis at recusandae,
+            dolorem quisquam deserunt ipsam fugit minima quo neque nihil voluptatibus rerum placeat
+            tenetur ducimus vel aspernatur officiis explicabo, culpa doloremque beatae alias,
+            voluptatum tempora. Nobis! Velit, eos laboriosam nihil ducimus reprehenderit fuga
+            pariatur maiores maxime consectetur enim. Impedit corrupti facilis aliquam dignissimos.
+            Facilis nam iste porro enim. Quam commodi dignissimos fugit sequi reiciendis eligendi
+            deserunt! Quaerat adipisci voluptate odit vitae delectus enim neque magnam tenetur quae
+            accusamus magni sunt voluptas asperiores rerum quia excepturi non ad, obcaecati odio
+            ipsam deserunt sapiente nam maxime quo! Iure. Iste modi numquam sapiente eius voluptate,
+            porro asperiores ut at impedit corrupti accusantium tenetur ex, reprehenderit eaque,
+            nobis facilis libero quidem amet possimus est quibusdam architecto omnis doloribus
+            rerum. Dolorum.
+          </div>
+        </section>
+        <section>
+          <div class="content-container">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cum suscipit vel
+            corporis impedit deleniti quia id maiores, doloribus sunt consectetur asperiores modi
+            quasi ad voluptatum vitae nulla. Illum, quis! Ut pariatur perspiciatis at recusandae,
+            dolorem quisquam deserunt ipsam fugit minima quo neque nihil voluptatibus rerum placeat
+            tenetur ducimus vel aspernatur officiis explicabo, culpa doloremque beatae alias,
+            voluptatum tempora. Nobis! Velit, eos laboriosam nihil ducimus reprehenderit fuga
+            pariatur maiores maxime consectetur enim. Impedit corrupti facilis aliquam dignissimos.
+            Facilis nam iste porro enim. Quam commodi dignissimos fugit sequi reiciendis eligendi
+            deserunt! Quaerat adipisci voluptate odit vitae delectus enim neque magnam tenetur quae
+            accusamus magni sunt voluptas asperiores rerum quia excepturi non ad, obcaecati odio
+            ipsam deserunt sapiente nam maxime quo! Iure. Iste modi numquam sapiente eius voluptate,
+            porro asperiores ut at impedit corrupti accusantium tenetur ex, reprehenderit eaque,
+            nobis facilis libero quidem amet possimus est quibusdam architecto omnis doloribus
+            rerum. Dolorum.
+          </div>
+        </section>
+      </div>
+      <div class="up-btn" id="up-btn">&#x2912;</div>
+    </div>
+
+    <script>
+      let nav = document.getElementsByTagName('nav');
+      let moveTop = document.getElementById('up-btn');
+      let mMenu = document.getElementsByClassName('mMenu')[0];
+
+      let lastHeight = 0;
+      const navBaseHeight = 50;
+      const sectionHeight = window.innerHeight;
+      console.log(screen.availHeight);
+      window.addEventListener('scroll', function(e) {
+        let curHeight = window.scrollY;
+        if (curHeight > navBaseHeight && curHeight > lastHeight) {
+          nav[0].style.display = 'none';
+        } else {
+          nav[0].style.display = 'block';
+        }
+
+        if (curHeight > lastHeight) {
+          moveTop.style.display = 'none';
+        } else {
+          if (curHeight > 500) {
+            moveTop.style.display = 'block';
+          }
+        }
+
+        lastHeight = curHeight;
+      });
+
+      moveTop.addEventListener('click', function(e) {
+        window.scrollTo(0, 0, 2000);
+      });
+
+      let state = false;
+      mMenu.addEventListener('click', function(e) {
+        let menu = document.getElementsByClassName('pcMenu')[0];
+
+        if (state) {
+          menu.style.display = 'none';
+        } else {
+          menu.style.display = 'block';
+        }
+        state = !state;
+      });
+
+      let toggle = document.getElementById('sideBtnSpan');
+      let side = document.getElementsByClassName('side')[0];
+      let sideState = false;
+      toggle.addEventListener('click', function(e) {
+        if (sideState) {
+          side.style.display = 'none';
+        } else {
+          side.style.display = 'block';
+        }
+        sideState = !sideState;
+      });
+    </script>
+  </body>
+</html>

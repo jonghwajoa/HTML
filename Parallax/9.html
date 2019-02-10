@@ -27,17 +27,18 @@
 
       /* nav */
       #nav {
-        position: absolute;
+        position: fixed;
         left: 0;
-        bottom: 0;
+        top: 0px;
         width: 100%;
         height: 61px;
         z-index: 1000;
         background-color: rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
       }
       #nav.on {
         position: fixed;
-        top: 0;
+        top: -61px;
       }
       #nav h1 {
         float: left;
@@ -46,23 +47,41 @@
         padding: 5px 5px 5px 15px;
         font-family: 'Abel';
       }
-      #nav .menu {
-        float: right;
-        padding-right: 10px;
+
+      /* dot */
+      #dot {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translatey(-50%);
       }
-      #nav .menu li {
-        display: inline;
+      #dot li {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+        margin: 8px;
+        transition: box-shadow 0.3s ease;
       }
-      #nav .menu li a {
-        display: inline-block;
-        padding: 20px 15px;
-        color: #fff;
-        font-weight: bold;
-        font-family: 'Abel';
-        text-transform: capitalize;
+      #dot li a {
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, transform 0.3s ease;
       }
-      #nav .menu li.active a {
-        color: #111;
+      #dot li.active {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+      }
+      #dot li.active a {
+        transform: scale(0.4);
+      }
+      #dot li a em {
+        display: none;
       }
 
       /* contents */
@@ -75,7 +94,7 @@
         line-height: 100vh;
       }
       #contents > div h2 {
-        font-size: 90px;
+        font-size: 70px;
         font-weight: 200;
         text-transform: uppercase;
       }
@@ -85,93 +104,82 @@
       }
 
       /* section */
-      #section1 {
-        background: radial-gradient(
-          ellipse farthest-corner at center top,
-          #6cebcf 0%,
-          #38a7aa 100%
-        );
+      #section3 {
+        background: radial-gradient(ellipse farthest-corner at center top, #a3a1ff, #3a3897);
       }
       #section2 {
-        background: radial-gradient(
-          ellipse farthest-corner at center top,
-          #f39264 0%,
-          #f2606f 100%
-        );
+        background: radial-gradient(ellipse farthest-corner at center bottom, #3aa17e, #00537e);
       }
-      #section3 {
-        background: radial-gradient(ellipse farthest-corner at center top, #ffee75, #ff8930);
+      #section1 {
+        background: radial-gradient(ellipse farthest-corner at center top, #29abe2, #4f00bc);
       }
       #section4 {
-        background: radial-gradient(ellipse farthest-corner at center bottom, #6beace, #2e9aa4);
+        background: radial-gradient(ellipse farthest-corner at center top, #ff5300, #45145a);
       }
       #section5 {
-        background: radial-gradient(
-          ellipse farthest-corner at center bottom,
-          #69d2fb 0%,
-          #20438e 100%
-        );
+        background: radial-gradient(ellipse farthest-corner at center bottom, #852d91, #312a6c);
       }
       #section6 {
-        background: radial-gradient(ellipse farthest-corner at center top, #cbf49a, #1ea623);
+        background: radial-gradient(ellipse farthest-corner at center top, #fbb03b, #d4145a);
       }
     </style>
   </head>
   <body>
     <nav id="nav">
       <h1>WEB'S</h1>
-      <ul class="menu">
-        <li class="active"><a href="#section1">menu1</a></li>
-        <li><a href="#section2">menu2</a></li>
-        <li><a href="#section3">menu3</a></li>
-        <li><a href="#section4">menu4</a></li>
-        <li><a href="#section5">menu5</a></li>
-        <li><a href="#section6">menu6</a></li>
-      </ul>
     </nav>
+
+    <div id="dot">
+      <ul>
+        <li class="active">
+          <a href="#"><em>menu1</em></a>
+        </li>
+        <li>
+          <a href="#"><em>menu2</em></a>
+        </li>
+        <li>
+          <a href="#"><em>menu3</em></a>
+        </li>
+        <li>
+          <a href="#"><em>menu4</em></a>
+        </li>
+        <li>
+          <a href="#"><em>menu5</em></a>
+        </li>
+        <li>
+          <a href="#"><em>menu6</em></a>
+        </li>
+      </ul>
+    </div>
 
     <div id="contents">
       <div id="section1">
-        <h2>시간은 <strong>금이다.</strong></h2>
+        <h2>우아한 <strong>성공은</strong> 없다.</h2>
       </div>
       <div id="section2">
-        <h2>피할 수 없으면 <strong>즐겨라!</strong></h2>
+        <h2><strong>기회는</strong> 바로 옆에 있다.</h2>
       </div>
       <div id="section3">
-        <h2>삶이 있는 한 <strong>희망</strong>은 있다.</h2>
+        <h2>현실을 <strong>외면하지 말라.</strong></h2>
       </div>
       <div id="section4">
-        <h2>먼저핀 꽃은 <strong>먼저진다.</strong></h2>
+        <h2>공부는 우리 삶의 <strong>우선적 요소다.</strong></h2>
       </div>
       <div id="section5">
-        <h2>내일은 내일의 <strong>태양이 뜬다.</strong></h2>
+        <h2><strong>기회가</strong> 없으면 만들면 된다.</h2>
       </div>
       <div id="section6">
-        <h2>모든 인생은 <strong>실험이다.</strong></h2>
+        <h2>모든 일은 <strong>스스로 해결하라.</strong></h2>
       </div>
     </div>
 
-    <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
-      $('#nav').each(function() {
-        var header = $(this);
-        var headerOffset = header.offset().top;
-        $(window).scroll(function() {
-          var wScroll = $(this).scrollTop();
-          if (wScroll > headerOffset) {
-            header.addClass('on');
-          } else {
-            header.removeClass('on');
-          }
-        });
-      });
-
-      var nav = $('#nav ul li');
+      var dot = $('#dot > ul > li');
       var cont = $('#contents > div');
 
-      nav.click(function(e) {
+      dot.click(function(e) {
         e.preventDefault();
         var target = $(this);
         var index = target.index();
@@ -185,46 +193,28 @@
         var wScroll = $(this).scrollTop();
 
         if (wScroll >= cont.eq(0).offset().top) {
-          nav.removeClass('active');
-          nav.eq(0).addClass('active');
+          dot.removeClass('active');
+          dot.eq(0).addClass('active');
         }
         if (wScroll >= cont.eq(1).offset().top) {
-          nav.removeClass('active');
-          nav.eq(1).addClass('active');
+          dot.removeClass('active');
+          dot.eq(1).addClass('active');
         }
         if (wScroll >= cont.eq(2).offset().top) {
-          nav.removeClass('active');
-          nav.eq(2).addClass('active');
+          dot.removeClass('active');
+          dot.eq(2).addClass('active');
         }
         if (wScroll >= cont.eq(3).offset().top) {
-          nav.removeClass('active');
-          nav.eq(3).addClass('active');
+          dot.removeClass('active');
+          dot.eq(3).addClass('active');
         }
         if (wScroll >= cont.eq(4).offset().top) {
-          nav.removeClass('active');
-          nav.eq(4).addClass('active');
+          dot.removeClass('active');
+          dot.eq(4).addClass('active');
         }
         if (wScroll >= cont.eq(5).offset().top) {
-          nav.removeClass('active');
-          nav.eq(5).addClass('active');
-        }
-      });
-
-      $('.mNav').click(function() {
-        //$(".menu").css("display","block");
-        //$(".menu").show();
-        //$(".menu").fadeIn();
-        //$(".menu").slideDown();
-        $('.menu').toggle();
-        //$(".menu").fadeToggle();
-        //$(".menu").slideToggle();
-      });
-
-      $(window).resize(function() {
-        var wWidth = $(window).width();
-        //화면 크기가 960 이상일 때 style="display:none" 삭제
-        if (wWidth > 960 && $('.menu').is(':hidden')) {
-          $('.menu').removeAttr('style');
+          dot.removeClass('active');
+          dot.eq(5).addClass('active');
         }
       });
     </script>

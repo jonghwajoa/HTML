@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MHMM</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="side">
+        <div class="side-fixed">
+          <h1 id="brand">MHMM</h1>
+          <ul>
+            <li><a>Login</a></li>
+            <li><a>About Team</a></li>
+          </ul>
+          <div class="footer"><span>Copyright 2019 MHMM All Rights Reserved.</span></div>
+        </div>
+      </div>
+      <a class="sideBtn">Open </a>
+
+      <div class="content">
+        <div class="content-side">
+          <ul>
+            <li class="active">
+              <a><em>menu1</em></a>
+            </li>
+            <li>
+              <a><em>menu2</em></a>
+            </li>
+            <li>
+              <a><em>menu3</em></a>
+            </li>
+            <li>
+              <a><em>menu4</em></a>
+            </li>
+          </ul>
+        </div>
+        <!-- section1 -->
+        <section id="section1">
+          <!-- content-container -->
+          <div class="content-container">
+            MHMM은.... 메신저 입니다..
+
+            <p>MHMM GET IN START</p>
+          </div>
+          <!-- //content-container -->
+        </section>
+        <!-- //section1 -->
+
+        <!-- section2 -->
+        <section id="section2">
+          <!-- content-container -->
+          <div class="content-container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor culpa cumque,
+            perspiciatis saepe voluptatum modi quibusdam velit neque atque. Fugit, eius sapiente
+            nostrum cupiditate mollitia ipsum soluta assumenda doloremque.
+          </div>
+          <!-- //content-container -->
+        </section>
+        <!-- //section2 -->
+        <!-- section3 -->
+        <section id="section3">
+          <!-- content-container -->
+          <div class="content-container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor culpa cumque,
+            perspiciatis saepe voluptatum modi quibusdam velit neque atque. Fugit, eius sapiente
+            nostrum cupiditate mollitia ipsum soluta assumenda doloremque.
+          </div>
+          <!-- //content-container -->
+        </section>
+        <!-- //section3 -->
+        <!-- section4 -->
+        <section id="section4">
+          <!-- content-container -->
+          <div class="content-container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor culpa cumque,
+            perspiciatis saepe voluptatum modi quibusdam velit neque atque. Fugit, eius sapiente
+            nostrum cupiditate mollitia ipsum soluta assumenda doloremque.
+          </div>
+          <!-- //content-container -->
+        </section>
+        <!-- //section4 -->
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+      $('.sideBtn').click(function(e) {
+        e.preventDefault();
+        $('.sideBtn').toggleClass('on');
+
+        if ($('.sideBtn').hasClass('on')) {
+          $('.side').show();
+          $('.sideBtn')
+            .animate({ left: '270px' }, 200)
+            .text('Close');
+        } else {
+          $('.side').hide();
+          $('.sideBtn')
+            .animate({ left: '20px' }, 200)
+            .text('OPEN');
+        }
+      });
+
+      let sectionTag = $('section');
+      let contentSide = $('.content-side > ul > li');
+
+      $(window).scroll(function() {
+        var wScroll = $(this).scrollTop();
+        if (wScroll >= sectionTag.eq(0).offset().top) {
+          contentSide.removeClass('active');
+          contentSide.eq(0).addClass('active');
+        }
+        if (wScroll >= sectionTag.eq(1).offset().top) {
+          contentSide.removeClass('active');
+          contentSide.eq(1).addClass('active');
+        }
+        if (wScroll >= sectionTag.eq(2).offset().top) {
+          contentSide.removeClass('active');
+          contentSide.eq(2).addClass('active');
+        }
+        if (wScroll >= sectionTag.eq(3).offset().top) {
+          contentSide.removeClass('active');
+          contentSide.eq(3).addClass('active');
+        }
+      });
+
+      contentSide.click(function(e) {
+        e.preventDefault();
+        var target = $(this);
+        var index = target.index();
+        //alert(index);
+        var section = sectionTag.eq(index);
+        var offset = section.offset().top;
+        $('html,body').animate({ scrollTop: offset });
+      });
+    </script>
+  </body>
+</html>
