@@ -23,13 +23,13 @@
   text-decoration: underline #cccccc;
 }
 
-.wrap .side ul {
+.wrap .side .side-fixed ul {
   text-align: center;
   margin-top: 50px;
   text-transform: uppercase;
 }
 
-.wrap .side li a {
+.wrap .side .side-fixed li a {
   padding: 1rem 0;
   display: block;
   color: white;
@@ -37,8 +37,18 @@
   font-size: 1.2rem;
 }
 
-.wrap .side li a:hover {
+.wrap .side .side-fixed li a:hover {
   background: rgba(100, 100, 100, 0.3);
+}
+
+.wrap .side .side-fixed .footer {
+  position: absolute;
+  bottom: 2rem;
+  margin: 0 auto;
+}
+
+.wrap .side .side-fixed .footer span {
+  color: white;
 }
 
 /* OPEN & CLOSE BTN */
@@ -67,11 +77,19 @@
   height: 100vh;
   width: 100%;
   background: white;
-  border-bottom: 5px solid tomato;
 }
 
 #section1 {
 }
+#section1 p {
+  width: 200px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  background: skyblue;
+  text-align: center;
+  cursor: pointer;
+}
+
 #section2 {
 }
 #section3 {
