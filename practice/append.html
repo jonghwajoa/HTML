@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="append">
+      test
+    </div>
+
+    <script>
+      const app = document.getElementById('append');
+
+      for (let i = 0; i < 10; i++) {
+        let div = document.createElement('div');
+        div.innerText = `${i}입니다`;
+        app.append(div);
+      }
+    </script>
+  </body>
+</html>

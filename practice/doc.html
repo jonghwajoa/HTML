@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const SUBJECT = ['국어', '영어', '수학', '과학', '사회'];
+      for (let i = 0; i < 5; i++) {
+        let score = prompt(SUBJECT[i]);
+
+        while (score < 0 || score > 100 || !Number.isInteger(Number(score))) {
+          let message = '';
+          if (score < 0) {
+            message = `점수는 0점 이하일 수 없습니다. \n${SUBJECT[i]}의 점수를 다시 입력해주세요.`;
+          } else if (score > 100) {
+            message = `점수는 100점 이상일 없습니다. \n${SUBJECT[i]}의 점수를 다시 입력해주세요.`;
+          } else {
+            message = `숫자만 입력해주세요. \n${SUBJECT[i]}의 점수를 다시 입력해주세요.`;
+          }
+          score = prompt(message);
+        }
+      }
+    </script>
+  </body>
+</html>

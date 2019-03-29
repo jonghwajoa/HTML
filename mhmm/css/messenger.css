@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
   background: #f1f1f1;
 }
@@ -6,19 +8,21 @@ body {
 }
 
 .content-container {
-  width: 80%;
+  width: 800px;
   height: 90vh;
-  box-sizing: border-box;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  margin: 30px auto 0;
-  background: white;
+  margin: 0 auto;
   display: flex;
 }
 
 .content-container > section {
-  flex: 1 1 100%;
+  flex: 1 1 400px;
   overflow: auto;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  margin: 30px auto 0;
+  background: white;
+  margin-right: 30px;
+  border-radius: 10px;
 }
 
 .content-container .friend-wrap {
@@ -28,11 +32,6 @@ body {
 }
 
 .messenger-select {
-}
-
-.friend-wrap > div {
-  /* border-bottom: 1px solid #c8c8c8; */
-  padding: 1rem 0.5rem;
 }
 
 .friend-wrap .friend-add {
@@ -52,6 +51,7 @@ body {
 .friend-wrap .friend-add input[type='text'] {
   border-bottom: 1px solid grey;
   padding: 0px 5px;
+  width: 120px;
 }
 
 .friend-wrap .friend-add input[type='button'] {
@@ -59,11 +59,12 @@ body {
   padding: 5px 10px;
   font-size: 1rem;
   color: #f8f9fa;
+  float: right;
   cursor: pointer;
 }
 
 .friend-add .friend-search-result {
-  /* display: none; */
+  display: none;
   background: white;
   min-height: 20px;
   margin-top: 1rem;
@@ -82,22 +83,55 @@ body {
   right: 0;
 }
 
-.friend-wrap .friend img {
-  border: 1px solid purple;
+.friend {
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.friend-wrap .friend .chatBtn {
+  outline: none;
+  border: none;
+  background: rgba(153, 102, 255, 0.2);
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  float: right;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.friend-wrap .friend-list > div {
+  padding: 0.8rem 0.5rem;
+}
+
+.friend-wrap .friend-list .friend .img {
+  display: inline-block;
   padding: 0.5rem 0.2rem;
   border-radius: 20%;
   margin-right: 5px;
+  width: 20px;
+  height: 20px;
 }
 
-.friend-wrap .friend span.friend-name {
+.friend-wrap .friend-list .friend span.friend-name {
   cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  vertical-align: top;
 }
 
-.messange {
+.chatroom-section {
 }
 
-.messange .messenger-room {
+.chatroom-section .chat-room {
   padding: 1.5rem 0.7rem;
-  /* border-bottom: 1px solid #c8c8c8; */
+  border-bottom: 1px solid #c8c8c8;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+}
+
+.chatroom-section .chat-room:hover {
+  color: #6741d9;
 }
